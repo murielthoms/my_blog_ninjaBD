@@ -18,27 +18,31 @@ $articles = ORM::for_table('post')->find_many();
 </head>
 <body>
 	<h1>Mon blog</h1>
-	<table class="ui selectable inverted table">
-		<tr>
-			<th>Titre</th>
-			<th>Auteur</th>
-			<th>Contenu</th>
-			<th>Crée le</th>
-			<th>Mise à jour le</th>
-		</tr>
-		<?php foreach ($articles as $value):?>
-			<tr>
-				<td><?=$value['title']?></td>
-				<td><?=$value['author']?></td>
-				<td><?=$value['content']?></td>
-				<td><?=$value['created_at']?></td>
-				<td><?=$value['updated_at']?></td>
-			</tr>
-		<?php endforeach;?>
-	</table>
 
+
+		<table class="ui inverted table">
+		<thead>
+			<tr>
+				<th>Titre</th>
+				<th>Auteur</th>
+				<th>Contenu</th>
+				<th>Crée le</th>
+				<th>Mise à jour le</th>
+			</tr>
+			</thead>
+			<?php foreach ($articles as $value):?>
+				<tr>
+					<td><?=$value['title']?></td>
+					<td><?=$value['author']?></td>
+					<td><?=$value['content']?></td>
+					<td><?=$value['created_at']?></td>
+					<td><?=$value['updated_at']?></td>
+				</tr>
+			<?php endforeach;?>
+		</table>
+	
 	<form action="form.php" method="get">
-		<button class="ui large blue button">Ajouter un article</button>
+		<button class="ui large green button">Ajouter un article</button>
 		
 	</form>
 
