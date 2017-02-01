@@ -34,10 +34,14 @@ $articles = ORM::for_table('post')->find_many();
 				<td><?=$value['created_at']?></td>
 				<td><?=$value['updated_at']?></td>
 			</tr>
-
 		<?php endforeach;?>
+	</table>
+
+	<form action="form.php" method="get">
+		<button class="ui large blue button">Ajouter un article</button>
+		
+	</form>
 
 
-
-	</body>
-	</html>
+</body>
+</html>
