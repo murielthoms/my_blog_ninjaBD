@@ -1,0 +1,12 @@
+{
+    "name": "root/my_blog_ninja-db",
+    "authors": [
+        {
+            "name": "muriel",
+            "email": "murielthoms@gmail.com"
+        }
+    ],
+    "require": {
+        "j4mie/idiorm": "^1.5"
+    }
+}
